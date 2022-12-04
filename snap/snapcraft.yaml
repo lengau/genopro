@@ -2,19 +2,19 @@ name: genopro
 title: GenoPro
 base: core20
 version: "3.1.0.1-snap0" # Based on the installed GenoPro version number plus snap changes
-summary: Unofficial package for GenoPro
+summary: The best genealogy software for drawing family trees and genograms.
 description: |
   GenoPro is a software application for drawing family trees and genograms.
   It can store additional information such as pictures, contacts, places,
   sources, occupation and education history for each individual, as well as
   document the relationships among individuals.
 
-  GenoPro is not a free application. Prices can be found on
-  [the GenoPro website](https://genopro.com/buy/). Registration can also
+  GenoPro is not a free application. Prices can be found at
+  https://genopro.com/buy/
+  Registration can also
   be done through the application itself.
 
-  This package is an unofficial packaging of Genopro alone with Wine.
-  Please report bugs at github.com/lengau/genopro/issues
+  This package is an unofficial packaging of Genopro along with Wine.
 
 grade: devel
 confinement: strict # use 'strict' once you have the right plugs and slots
@@ -26,7 +26,7 @@ assumes:
   - common-data-dir
 contact: https://github.com/lengau
 issues: https://github.com/lengau/genopro/issues
-icon: genopro-512.png
+icon: images/genopro-512.png
 license: Proprietary
 source-code: https://github.com/lengau/genopro
 website: https://genopro.com
