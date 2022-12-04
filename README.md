@@ -2,8 +2,7 @@
   <img src="https://genopro.com/images/GenoProHeader2016.png" alt="GenoPro">
 </h1>
 
-<p align="center"><b>This is the snap for <a href="https://genopro.com">GenoPro</a></b>, <i>“The best genealogy software for drawing family trees and genograms.”</i> It works on Ubuntu, Fedora, Debian, and other major Linux
-distributions.</p>
+<p align="center"><b>This is the snap for <a href="https://genopro.com">GenoPro</a></b>, <i>“The best genealogy software for drawing family trees and genograms.”</i> It works on Ubuntu, Fedora, Debian, and other major Linux distributions.</p>
 
 <!-- Uncomment and modify this when you are provided a build status badge
 <p align="center">
@@ -16,15 +15,23 @@ distributions.</p>
 </p>
 -->
 
-<!-- Uncomment and modify this when you have a screenshot
-![genopro](screenshot.png?raw=true "genopro")
--->
+![genopro](Screenshot.webp?raw=true "genopro")
 
 <p align="center">Published for <img src="https://raw.githubusercontent.com/anythingcodes/slack-emoji-for-techies/gh-pages/emoji/tux.png" align="top" width="24" alt="Linux" /> with 💝 by Snapcrafters</p>
 
 ## Install
 
+To install this snap, run
+
     sudo snap install genopro
+    
+from your terminal. This will install a GenoPro application icon, and upon first run it will automatically download and install the appropriate Visual C runtime for wine and GenoPro.
+
+Please note that you will need Internet access on the first run of the application.
+
+## Additional tools
+
+The snap also makes the commands `genopro.wine` and `genopro.winetricks` available. The former allows one to run Windows executables in the GenoPro wine environment and the latter allows use of winetricks within that same environment.
 
 <!-- Uncomment and modify this when your snap is available on the store
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/genopro)
@@ -46,8 +53,8 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/snapcrafters-reboot/24625))
   - [x] Create a snap that runs in `devmode`
   - [x] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
   - [x] Register the snap in the store, **using the preferred upstream name**
-  - [ ] Add a screenshot to this `README.md`
-  - [ ] Add install instructions to this `README.md`
+  - [x] Add a screenshot to this `README.md`
+  - [x] Add install instructions to this `README.md`
   - [ ] Update snap store metadata, icons and screenshots
   - [ ] Publish the confined snap in the Snap store beta channel
   - [ ] Update the install instructions in this `README.md`

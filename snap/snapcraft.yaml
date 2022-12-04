@@ -1,4 +1,5 @@
 name: genopro
+title: GenoPro
 base: core20
 version: "3.1.0.1-snap0" # Based on the installed GenoPro version number plus snap changes
 summary: Unofficial package for GenoPro
@@ -8,15 +9,27 @@ description: |
   sources, occupation and education history for each individual, as well as
   document the relationships among individuals.
 
+  GenoPro is not a free application. Prices can be found on
+  [the GenoPro website](https://genopro.com/buy/). Registration can also
+  be done through the application itself.
+
   This package is an unofficial packaging of Genopro alone with Wine.
   Please report bugs at github.com/lengau/genopro/issues
 
-grade: stable
+grade: devel
 confinement: strict # use 'strict' once you have the right plugs and slots
 architectures:
-  - build-on: amd64
-  - build-on: i386
+  - amd64
+  - i386
 compression: lzo
+assumes:
+  - common-data-dir
+contact: https://github.com/lengau
+issues: https://github.com/lengau/genopro/issues
+icon: genopro-512.png
+license: Proprietary
+source-code: https://github.com/lengau/genopro
+website: https://genopro.com
 
 environment:
   WINEDLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
@@ -40,15 +53,14 @@ parts:
     plugin: make
     source: https://github.com/snapcrafters/sommelier-core.git
     source-branch: "1.0"
-  local-files:
-    plugin: dump
-    source: ./static
+  # local-files:
+  #   plugin: dump
+  #   source: ./static
 
 apps:
   genopro:
     extensions: [gnome-3-38]
     command: bin/sommelier run-exe
-    desktop: usr/share/applications/GenoPro.desktop
     environment:
       WINEARCH: win32
       RUN_EXE: C:/GenoPro/GenoPro.exe
