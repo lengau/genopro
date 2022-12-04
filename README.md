@@ -14,7 +14,7 @@
 </a>
 </p>
 
-![genopro](Screenshot.webp?raw=true "genopro")
+![genopro](images/Basic.png?raw=true "genopro")
 
 <p align="center">Published for <img src="https://raw.githubusercontent.com/anythingcodes/slack-emoji-for-techies/gh-pages/emoji/tux.png" align="top" width="24" alt="Linux" /> with 💝 by Snapcrafters</p>
 
@@ -37,8 +37,6 @@ Please note that you will need Internet access on the first run of the applicati
 The snap also makes the commands `genopro.wine` and `genopro.winetricks` available. The former allows one to run Windows executables in the GenoPro wine environment and the latter allows use of winetricks within that same environment.
 
 ## Remaining tasks
-![genopro](images/Basic.png?raw=true "genopro")
-
 
 Snapcrafters ([join us](https://forum.snapcraft.io/t/snapcrafters-reboot/24625)) are working to land snap install documentation and the [snapcraft.yaml](https://github.com/snapcrafters/fork-and-rename-me/blob/master/snap/snapcraft.yaml) upstream so GenoPro can authoritatively publish future releases.
 
