@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=GenoPro
+GenericName=Genogram Software
+Comment=The best genealogy software for drawing family trees and genograms.
+Encoding=UTF-8
+Version=2020
+Type=Application
+Terminal=false
+Icon=${SNAP}/usr/share/pixmaps/GenoPro2016-Icon.png
+Exec=genopro.genopro %F
+StartupWMClass=GenoPro.exe
+Categories=Office;Wine;Windows;
+Keywords=Genealogy;Family History;Research;Family Tree;GEDCOM;
+MimeType=application/x-gedcom;application/x-wine-extension-gno;application/xml;application/octet-stream;
