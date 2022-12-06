@@ -1,7 +1,7 @@
 name: genopro
 title: GenoPro
 base: core20
-version: "3.1.0.1-snap0" # Based on the installed GenoPro version number plus snap changes
+version: "3.1.0.1" # Based on the installed GenoPro version number
 summary: The best genealogy software for drawing family trees and genograms.
 description: |
   GenoPro is a software application for drawing family trees and genograms.
@@ -28,6 +28,7 @@ architectures:
   - i386
 compression: lzo
 assumes:
+  - snapd2.55
   - common-data-dir
 contact: https://github.com/lengau
 issues: https://github.com/lengau/genopro/issues
@@ -52,6 +53,12 @@ plugs:
     interface: content
     target: $SNAP/wine-platform
     default-provider: wine-platform-7-devel-core20
+  # Guarantee installation of the cups interface. See: https://snapcraft.io/docs/cups-interface
+  foo-install-cups:
+    interface: content
+    content: foo
+    default-provider: cups
+    target: $SNAP_DATA/foo
 
 parts:
   sommelier-core:
@@ -67,12 +74,13 @@ apps:
       WINEARCH: win32
       RUN_EXE: C:/GenoPro/GenoPro.exe
       INSTALL_URL: https://genopro.com/archives/InstallGenoPro.3.1.0.1.exe
-      INSTALL_FLAGS: /USilent /ND /path "C:\GenoPro" # optional commandline flags to pass to the installer
+      INSTALL_FLAGS: /USilent /ND /path "C:\GenoPro"
       TRICKS: vcrun6
-    plugs: # change these as required
+    plugs:
       - home
       - network
       - removable-media
+      - cups
   wine:
     extensions: [gnome-3-38]
     command: bin/sommelier
