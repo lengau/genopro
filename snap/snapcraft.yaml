@@ -16,6 +16,11 @@ description: |
 
   This package is an unofficial packaging of Genopro along with Wine.
 
+  Accessing external meda requires providing additional permission. If you need
+  to do this, provide this app with removable media access through your software
+  store or run:
+    snap connect genopro:removable-media
+
 grade: devel
 confinement: strict # use 'strict' once you have the right plugs and slots
 architectures:
@@ -53,9 +58,6 @@ parts:
     plugin: make
     source: https://github.com/snapcrafters/sommelier-core.git
     source-branch: "1.0"
-  # local-files:
-  #   plugin: dump
-  #   source: ./static
 
 apps:
   genopro:
