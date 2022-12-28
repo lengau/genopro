@@ -14,14 +14,15 @@ description: |
   Registration can also
   be done through the application itself.
 
-  This package is an unofficial packaging of Genopro along with Wine.
+  This package is an unofficial packaging of Genopro using the Sommelier plug
+  provided by Snapcrafters.
 
   Accessing external meda requires providing additional permission. If you need
   to do this, provide this app with removable media access through your software
   store or run:
     snap connect genopro:removable-media
 
-grade: devel
+grade: stable
 confinement: strict # use 'strict' once you have the right plugs and slots
 architectures:
   - amd64
@@ -75,7 +76,7 @@ apps:
       RUN_EXE: C:/GenoPro/GenoPro.exe
       INSTALL_URL: https://genopro.com/archives/InstallGenoPro.3.1.0.1.exe
       INSTALL_FLAGS: /USilent /ND /path "C:\GenoPro"
-      TRICKS: vcrun6
+      TRICKS: vcrun6 cjkfonts corefonts tahoma
     plugs:
       - home
       - network
